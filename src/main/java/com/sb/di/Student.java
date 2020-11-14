@@ -1,13 +1,17 @@
 package com.sb.di;
 
 public class Student {
+
     private String name;
     private Integer age;
+    private Teacher teacher;
 
     public Student() {
+        System.out.println("學生建構子1");
     }
 
     public Student(String name, Integer age) {
+        System.out.println("學生建構子2");
         this.name = name;
         this.age = age;
     }
@@ -28,13 +32,17 @@ public class Student {
         this.age = age;
     }
 
+    public Teacher getTeacher() {
+        return teacher;
+    }
+
+    public void setTeacher(Teacher teacher) {
+        this.teacher = teacher;
+    }
 
     @Override
     public String toString() {
-        return "Student{" + "name=" + name + ", age=" + age + '}';
+        return "Student{" + "name=" + name + ", age=" + age + ", teacher=" + teacher + '}';
     }
 
-    
-    
-    
 }
