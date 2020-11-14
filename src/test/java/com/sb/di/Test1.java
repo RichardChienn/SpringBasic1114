@@ -6,7 +6,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Test1 {
     @Test
     public void t1() {
-        ClassPathXmlApplicationContext cts = new ClassPathXmlApplicationContext("beans-config.xml");
+        ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("beans-config.xml");
+        Student s1 = (Student)ctx.getBean("s1");
+        System.out.println(s1);
+        ctx.close();
     }
 
 }
