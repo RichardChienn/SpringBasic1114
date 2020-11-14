@@ -1,14 +1,12 @@
 package com.sb.di;
 
 import org.junit.Test;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Test1 {
     @Test
     public void t1() {
-        Student s1 = new Student();
-        s1.setName("John");
-        s1.setAge(18);
-        System.out.println(s1);
+        ClassPathXmlApplicationContext cts = new ClassPathXmlApplicationContext("beans-config.xml");
     }
 
 }
