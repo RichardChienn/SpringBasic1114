@@ -1,6 +1,5 @@
 package com.sb.di4;
 
-import com.sb.di3.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
