@@ -25,7 +25,16 @@ public class ProxyUtil {
                 //前置通知
                 System.out.println("準備好紙筆來計算......");
                 System.out.println("參數 : " + (args != null ? Arrays.toString(args) : ""));
-                result = method.invoke(object, args);
+                try {
+                    result = method.invoke(object, args);
+                    System.out.println("返回通知 result:" + result);
+                } catch (Exception e) {
+                    //異常通知
+                    System.out.println("異常通知" + e);
+                } finally {
+                    //後置通知
+                    System.out.println("後置通知:將紙筆歸還原處......");
+                }
                 return result;
             }
         };
