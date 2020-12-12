@@ -11,8 +11,8 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <spring.version>4.3.29.RELEASE</spring.version>
         <junit.version>4.13.1</junit.version>
+        <hibernate.version>4.3.11.Final</hibernate.version>
     </properties>
-    
     
     <dependencies>
         <!-- Spring Basic -->
@@ -21,13 +21,11 @@
             <artifactId>spring-core</artifactId>
             <version>${spring.version}</version>
         </dependency>
-        
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
             <version>${spring.version}</version>
         </dependency>
-        
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
@@ -40,6 +38,7 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
+        
         <!-- AOP -->
         <dependency>
             <groupId>cglib</groupId>
@@ -66,6 +65,7 @@
             <artifactId>aopalliance</artifactId>
             <version>1.0</version>
         </dependency>
+        
         <!-- Spring JDBC -->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -97,14 +97,26 @@
             <version>0.9.5.2</version>
         </dependency>
         
-        <!--SimpleFlatMapper 簡單數據庫映射-->
+        <!-- SimpleFlatMapper 簡單數據庫映射 -->
         <dependency>
             <groupId>org.simpleflatmapper</groupId>
             <artifactId>sfm-springjdbc</artifactId>
             <version>3.11.7</version>
         </dependency>
         
-
-
+        <!-- JPA (Hibernate) -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
+        
     </dependencies>
+    
 </project>
