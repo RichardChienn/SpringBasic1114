@@ -3,8 +3,8 @@ package com.jdbc.template.mapper.entity;
 public class Item {
     private Integer id;
     private Integer amount;
-    private ItemProduct product;  //根據 ipid 所指向的 entity 
-    private ItemProduct invoice;  //根據 invid 所指向的 entity 
+    private ItemProduct product; // 根據 ipid 所指向的 entity
+    private Invoice invoice; // 根據 invid 所指向的 entity
 
     public Integer getId() {
         return id;
@@ -30,11 +30,11 @@ public class Item {
         this.product = product;
     }
 
-    public ItemProduct getInvoice() {
+    public Invoice getInvoice() {
         return invoice;
     }
 
-    public void setInvoice(ItemProduct invoice) {
+    public void setInvoice(Invoice invoice) {
         this.invoice = invoice;
     }
 
@@ -42,5 +42,7 @@ public class Item {
     public String toString() {
         return "Item{" + "id=" + id + ", amount=" + amount + ", product=" + product + ", invoice=" + invoice + '}';
     }
+    
+    
     
 }
