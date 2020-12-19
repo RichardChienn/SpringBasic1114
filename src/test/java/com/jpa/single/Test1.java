@@ -1,6 +1,7 @@
-package com.jpa;
+package com.jpa.single;
 
-import com.jpa.entity.Customer;
+import com.jpa.JPATemplate;
+import com.jpa.entity.manytoone.Customer;
 import org.junit.Test;
 
 public class Test1 extends JPATemplate {
