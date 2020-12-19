@@ -7,11 +7,12 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name ="departments")
+@Table(name = "clubs")
 public class Club {
     @Id
     @GeneratedValue
     private Integer id;
+    
     @Column
     private String name;
 
@@ -31,6 +32,4 @@ public class Club {
         this.name = name;
     }
     
-    
-
 }

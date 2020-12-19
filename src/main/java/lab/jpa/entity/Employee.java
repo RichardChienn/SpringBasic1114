@@ -32,9 +32,9 @@ public class Employee {
     
     @ManyToMany(cascade = CascadeType.PERSIST)
     @JoinTable(
-            name ="employee_club",
-            joinColumns = {@JoinColumn(name = "employee_id",referencedColumnName = "id")},
-            inverseJoinColumns = {@JoinColumn(name = "club_id",referencedColumnName = "id")}
+            name = "employee_club",
+            joinColumns = {@JoinColumn(name = "employee_id", referencedColumnName = "id")},
+            inverseJoinColumns = {@JoinColumn(name = "club_id", referencedColumnName = "id")}
     )
     private Set<Club> clubs = new LinkedHashSet<>();
 
@@ -77,6 +77,7 @@ public class Employee {
     public void setClubs(Set<Club> clubs) {
         this.clubs = clubs;
     }
+    
     
     
 }
