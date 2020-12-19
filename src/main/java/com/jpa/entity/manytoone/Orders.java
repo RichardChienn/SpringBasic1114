@@ -16,11 +16,12 @@ public class Orders {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     
-    @Column(name = "name", length =50,nullable =false)
+    //@Column(name = "name", length = 50, nullable = false)
+    @Column(name = "name", length = 50)
     private String name;
     
     @ManyToOne
-    @JoinColumn(name = "customer id",referencedColumnName = "id")
+    @JoinColumn(name = "customer_id", referencedColumnName = "id")
     private Customer customer;
 
     public Integer getId() {
